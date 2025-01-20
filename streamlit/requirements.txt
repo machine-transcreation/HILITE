@@ -1,0 +1,9 @@
+﻿streamlit
+streamlit-drawable-canvas==0.8.0
+Pillow
+numpy
+matplotlib
+opencv-python-headless
+python-dotenv
+requests
+pymongo
