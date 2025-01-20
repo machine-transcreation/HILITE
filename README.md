@@ -1,4 +1,6 @@
-# HILITE: Human-in-the-loop Interactive Tool for Image Editing 
+# HILITE: Human-in-the-loop Interactive Tool for Image Editing
+
+You can access the paper [here](https://ieeexplore.ieee.org/document/10825916).
 
 **Abstract**
 ---
