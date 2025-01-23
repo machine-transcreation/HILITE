@@ -168,6 +168,25 @@ const PublishForm = ({
       console.log('Feedback upload result:', feedbackResult);
 
       setUploadStatus(`Uploaded "${finalTitle}" as ${visibility}!`);
+      
+      
+      setVisibility('public');
+      setTitle('');
+      setFromCulture('');
+      setToCulture('');
+      setApplication('');
+      setNumber('');
+      setInitialRelevance('');
+      setFinalRelevance('');
+      
+      
+      if (reset) {
+        reset();
+      }
+
+      setTimeout(() => {
+        setUploadStatus('');
+      }, 3000);
     } catch (err) {
       console.error('Error uploading data:', err);
       setUploadStatus(`Failed to upload: ${err.message}`);
