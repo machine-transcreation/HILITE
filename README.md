@@ -136,7 +136,79 @@ streamlit run canvas.py
 
 [Model Deployment Repository](https://github.com/machine-transcreation/model-deployment)
 
+**Supported models on HILITE**
+---
+HILITE was built on open-source SOTA models and would greatly appreciate your initiative to add more models. 
 
+Currently these models are deployed on the [Runpod Serverless Service](https://www.runpod.io/):
+- [AnyDoor: Zero-shot Object-level Image Customization](https://github.com/ali-vilab/AnyDoor)
+- [ControlNet Backend with Stable Diffusion v1.5](https://github.com/lllyasviel/ControlNet)
+- [DEADiff](https://github.com/bytedance/DEADiff)
+- [Inversion-Free Image Editing with Natural Language](https://github.com/sled-group/InfEdit)
+- [InstructPix2Pix: Learning to Follow Image Editing Instructions](https://github.com/timothybrooks/instruct-pix2pix)
+- [PowerPaint: A Versatile Image Inpainting Model](https://github.com/open-mmlab/PowerPaint)
+
+For ease of use (formulating masks on streamlit interface):
+- [Segment Anything 2](https://github.com/facebookresearch/sam2)
+
+**Testing Runpod endpoints locally**
+---
+All models are packaged into docker images due to Runpod's requirements, here are the docker images of deployed models:
+- [AnyDoor: Zero-shot Object-level Image Customization](https://hub.docker.com/repository/docker/jaicode08/anydoor/general)
+- [ControlNet Backend with Stable Diffusion v1.5](https://hub.docker.com/repository/docker/jaicode08/controlnet/generalt)
+- [DEADiff](https://hub.docker.com/repository/docker/jaicode08/deadiff/general)
+- [Inversion-Free Image Editing with Natural Language](https://hub.docker.com/repository/docker/jaicode08/invfree/general)
+- [InstructPix2Pix: Learning to Follow Image Editing Instructions](https://hub.docker.com/repository/docker/jaicode08/ip2p/general)
+- [PowerPaint: A Versatile Image Inpainting Model](https://hub.docker.com/repository/docker/jaicode08/powerpaint/general)
+- [Segment Anything 2](https://hub.docker.com/repository/docker/jaicode08/sam2/general)
+
+Fetch images using this command:
+```bash
+docker pull jaicode08/<model-name>:latest
+```
+
+Run the fetched image:
+```bash
+docker run -p 8000:8000 jaicode08/<model-name>:latest
+```
+
+**Developing Runpod endpoints**
+---
+Please read through [Runpod's documentation](https://docs.runpod.io/serverless/overview) for developing serverless endpoints
+
+Step by step instructions on how to create your model endpoint:
+1. Create a directory for your model
+2. Create two folders, one named "builder" and another named "src"
+3. Create a Dockerfile
+4. In the "builder" folder, create a requierements.txt to store necessary dependencies.
+5. In the "src" folder, include necessary code for the model to function. To develop the endpoint for the model, create a file named "handler.py", include necessary inference code and Runpod's required job handler function
+6. Fill out Dockerfile (make sure to include the necessary python version)
+
+Sample Dockefile:
+```docker
+FROM python:3.12.4-bookworm
+
+WORKDIR /
+
+COPY builder/requirements.txt .
+RUN pip install -r requirements.txt
+
+ADD src .
+
+CMD ["python", "-u", "/handler.py"]
+``` 
+Your directory structure should look like this:
+```
+project_directory/
+├── builder/
+│   └── requirements.txt
+├── src/
+│   └── handler.py
+├── Dockerfile
+```
+8. Run the handler.py to make sure the endpoint functions properly, also build the docker image to make sure the code is packaged properly. 
+
+Finally open up a pull request with a link to your public docker image, compute requirements, and endpoint JSON schema.
 
 
 
