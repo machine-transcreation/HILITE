@@ -131,6 +131,14 @@ pip install -r requirements.txt
 streamlit run canvas.py
 ```
 
+**Add the URLs for the Backend, Intent, and Canvas to the following fields in the .env file located in the ```client``` folder:**
+---
+```bash
+NEXT_PUBLIC_EXPRESS_BACKEND_URL=
+NEXT_PUBLIC_INTENT_API_URL=
+NEXT_PUBLIC_STREAMLIT_APP=
+```
+
 **Model Deployment**
 ---
 
