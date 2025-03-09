@@ -42,6 +42,9 @@ NEXT_PUBLIC_PAINT_ENDPOINT=
 NEXT_PUBLIC_POWER_PAINT_ENDPOINT=
 NEXT_PUBLIC_ANY_DOOR_ENDPOINT=
 ```
+Create a uploadthing secret and token [here](https://uploadthing.com/)
+
+[Instructions](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) for obtaining a Google OAuth Client ID 
 
 Place the .env file in the ```client``` folder
 
@@ -66,6 +69,7 @@ npm run dev
 ```
 MONGODB_URI=
 ```
+[Instructions](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) for obtaining a MongoDB URI (Connection String) 
 
 Place the .env file in the ```server``` folder
 
@@ -91,6 +95,8 @@ node server.js
 ```
 GOOGLE_API_KEY=
 ```
+
+[Instructions](https://support.google.com/googleapi/answer/6158862?hl=en) for obtaining a Google API key. Make sure the Generative Language API is enabled.
 
 Place the .env file in the ```intent``` folder
 
