@@ -157,6 +157,7 @@ MONGODB_URI=
 **Instructions**
 
 1. [Instructions](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) for obtaining a MongoDB URI (Connection String). HILITE uses MongoDB, a NoSQL database.
+ 
 2. Place the .env file in the ```server``` folder
 
 
