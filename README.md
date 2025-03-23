@@ -234,7 +234,12 @@ NEXT_PUBLIC_STREAMLIT_APP=
 ```
 **Open `http://localhost:3000/` in your browser to use HILITE!**
 
- 
-
-
-
+ **Citation**
+```bibtex
+@article{,
+  title={HILITE: Human-in-the-loop Interactive Tool for Image Editing},
+  author={Pasumarthi, Arya and Sharma, Armaan and Patel, Jainish H. and Bheemaiah, Ayush and Vadlamannati, Subhadra and Chang, Seth and Li, Sophia and Barkataki, Eshaan and Zhang, Yutong and Yang, Diyi and Neubig, Graham and Khanuja, Simran},
+  journal={IEEE Xplore},
+  year={2024},
+  url={https://ieeexplore.ieee.org/document/10825916}
+}
