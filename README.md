@@ -235,6 +235,7 @@ NEXT_PUBLIC_STREAMLIT_APP=
 **Open `http://localhost:3000/` in your browser to use HILITE!**
 
  **Citation**
+ ---
 ```bibtex
 @article{hilite2024,
   title={HILITE: Human-in-the-loop Interactive Tool for Image Editing},
