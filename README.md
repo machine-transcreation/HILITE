@@ -79,7 +79,7 @@ CMD ["python", "-u", "/handler.py"]
 ``` 
 Your directory structure should look like this:
 ```
-project_directory/
+backend/
 ├── builder/
 │   └── requirements.txt
 ├── src/
