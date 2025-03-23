@@ -137,9 +137,9 @@ NEXT_PUBLIC_ANY_DOOR_ENDPOINT=
 ```bash
 cd client
 
-npm install
+npm install # Install dependencies 
 
-npm run dev
+npm run dev # Run the development server. Make sure it is running on the default port 3000.
 ```
 
 
@@ -164,9 +164,9 @@ MONGODB_URI=
 ```bash
 cd server
 
-npm install
+npm install # Install dependencies
 
-node server.js
+node server.js # Run the backend server
 ```
 
 **Intent**
@@ -192,9 +192,9 @@ GOOGLE_API_KEY=
 ```bash
 cd intent
 
-pip install -r requirements.txt
+pip install -r requirements.txt # Install dependencies
 
-python intent.py
+python intent.py # Run the Flask server
 ```
 
 
@@ -220,9 +220,9 @@ MONGODB_URI=
 ```bash
 cd streamlit
 
-pip install -r requirements.txt
+pip install -r requirements.txt # Install dependencies
 
-streamlit run canvas.py
+streamlit run canvas.py # Run the Streamlit server
 ```
 
 **Add the URLs for the Backend, Intent, and Canvas to the following fields in the .env file located in the ```client``` folder:**
@@ -232,7 +232,7 @@ NEXT_PUBLIC_EXPRESS_BACKEND_URL=
 NEXT_PUBLIC_INTENT_API_URL=
 NEXT_PUBLIC_STREAMLIT_APP=
 ```
-
+**Open `http://localhost:3000/` in your browser to use HILITE!**
 
  
 
