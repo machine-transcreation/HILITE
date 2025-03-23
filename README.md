@@ -61,7 +61,8 @@ Step by step instructions on how to create your model endpoint:
 3. Create a Dockerfile
 4. In the `builder` folder, create a requierements.txt to store necessary dependencies.
 5. In the `src` folder, include necessary code for the model to function. To develop the endpoint for the model, create a file named `handler.py`, include necessary inference code and Runpod's required job handler function
-6. Fill out Dockerfile (make sure to include the necessary python version)
+6. Additionally, create a Python script that downloads model checkpoints and saves them to their corresponding locations within the model directory. While not necessary for functionality, this script will help other contributors easily set up their working environment.
+7. Fill out Dockerfile (make sure to include the necessary python version)
 
 Sample Dockerfile:
 ```docker
@@ -83,6 +84,7 @@ project_directory/
 │   └── requirements.txt
 ├── src/
 │   └── handler.py
+├── get_ckpts_[model_name].py
 ├── Dockerfile
 ```
 8. Run the `handler.py` to make sure the endpoint functions properly, also build the docker image to make sure the code is packaged properly. 
