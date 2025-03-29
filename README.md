@@ -20,7 +20,7 @@ HILITE consists of the following components:
 - **Intent**: Detects user intent, refines user prompts, and routes requests to suitable models
 - **Canvas**: Streamlit canvas to obtain masks for reference-image-based models
 
-Ensure you have the latest versions of Node.js and Python installed. <!-- Can we specify the exact versions we need? -->
+Ensure you have Node.js v20.10.0 and Python 3.12.4 installed.
 
 **Frontend**
 ---
@@ -37,20 +37,15 @@ NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID=
 UPLOADTHING_SECRET=
 UPLOADTHING_TOKEN=
 NEXT_PUBLIC_RUNPOD_API_KEY=
-NEXT_PUBLIC_IP2P_ENDPOINT=
-NEXT_PUBLIC_INVFREE_ENDPOINT=
-NEXT_PUBLIC_CONTROL_ENDPOINT=
-NEXT_PUBLIC_DEADIFF_ENDPOINT=
-NEXT_PUBLIC_PAINT_ENDPOINT=
-NEXT_PUBLIC_POWER_PAINT_ENDPOINT=
-NEXT_PUBLIC_ANY_DOOR_ENDPOINT=
 ```
 **Instructions**
-1. Create a UploadThing secret and token [here](https://uploadthing.com/). UploadThing is a service for managing and uploaded files.
+1. Create a UploadThing secret and token [here](https://uploadthing.com/). UploadThing is a service for managing and uploaded files. Place these variables into `UPLOADTHING_SECRET=` and `UPLOADTHING_TOKEN=.`
 
-2. [Instructions](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) for obtaining a Google OAuth Client ID. The Client ID is required for managing HILITE's authentication.
+2. [Instructions](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) for obtaining a Google OAuth Client ID. The Client ID is required for managing HILITE's authentication. Place this in `NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID=.`
 
-3. Place the .env file in the ```client``` folder
+3. [Instructions](https://docs.runpod.io/get-started/api-keys) for obtaining an API key for running models on RunPod's serverless service. Place this in `NEXT_PUBLIC_RUNPOD_API_KEY=.`
+    
+4. Place the .env file in the ```client``` folder. The other variables will be added once you run the Backend, Intent, and Canvas.
 
 
 ```bash
@@ -75,7 +70,7 @@ MONGODB_URI=
 ```
 **Instructions**
 
-1. [Instructions](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) for obtaining a MongoDB URI (Connection String). HILITE uses MongoDB, a NoSQL database.
+1. [Instructions](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) for obtaining a MongoDB URI (Connection String). HILITE uses MongoDB, a NoSQL database. Place the connection string in `MONGODB_URI=.`
  
 2. Place the .env file in the ```server``` folder
 
@@ -102,7 +97,7 @@ GOOGLE_API_KEY=
 ```
 **Instructions**
 
-1. [Instructions](https://support.google.com/googleapi/answer/6158862?hl=en) for obtaining a Google API key. Ensure the Generative Language API is enabled to use Gemini 2.0 Flash.
+1. [Instructions](https://support.google.com/googleapi/answer/6158862?hl=en) for obtaining a Google API key. Ensure the Generative Language API is enabled to use Gemini 2.0 Flash. Place the API key in `GOOGLE_API_KEY=.`
 
 2. Place the .env file in the ```intent``` folder
 
