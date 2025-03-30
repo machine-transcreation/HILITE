@@ -36,16 +36,13 @@ NEXT_PUBLIC_STREAMLIT_APP=
 NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID=
 UPLOADTHING_SECRET=
 UPLOADTHING_TOKEN=
-NEXT_PUBLIC_RUNPOD_API_KEY=
 ```
 **Instructions**
 1. Create a UploadThing secret and token [here](https://uploadthing.com/). UploadThing is a service for managing and uploaded files. Place these variables into `UPLOADTHING_SECRET=` and `UPLOADTHING_TOKEN=.`
 
 2. [Instructions](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid) for obtaining a Google OAuth Client ID. The Client ID is required for managing HILITE's authentication. Place this in `NEXT_PUBLIC_GOOGLE_OAUTH_CLIENT_ID=.`
 
-3. [Instructions](https://docs.runpod.io/get-started/api-keys) for obtaining an API key for running models on RunPod's serverless service. Place this in `NEXT_PUBLIC_RUNPOD_API_KEY=.`
-    
-4. Place the .env file in the ```client``` folder. The other variables will be added once you run the Backend, Intent, and Canvas.
+3. Place the .env file in the ```client``` folder. The other variables will be added once you run the Backend, Intent, and Canvas.
 
 
 ```bash
@@ -67,12 +64,15 @@ npm run dev # Run the development server. Make sure it is running on the default
 
 ```
 MONGODB_URI=
+RUNPOD_API_KEY=
 ```
 **Instructions**
 
 1. [Instructions](https://www.mongodb.com/resources/products/fundamentals/mongodb-connection-string) for obtaining a MongoDB URI (Connection String). HILITE uses MongoDB, a NoSQL database. Place the connection string in `MONGODB_URI=.`
+   
+2. [Instructions](https://docs.runpod.io/get-started/api-keys) for obtaining an API key for running models on RunPod's serverless service. Place this in `RUNPOD_API_KEY=.`
  
-2. Place the .env file in the ```server``` folder
+3. Place the .env file in the ```server``` folder
 
 
 ```bash
