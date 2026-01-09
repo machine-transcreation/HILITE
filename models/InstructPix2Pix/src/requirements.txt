@@ -1,0 +1,1 @@
+python == 3.8.5pip == 20.3cudatoolkit == 11.3pytorch == 1.11.0torchvision == 0.12.0numpy == 1.19.2

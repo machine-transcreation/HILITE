@@ -1,0 +1,7 @@
+langchain
+pydantic
+google-generativeai
+flask
+flask-cors
+Pillow
+requests
